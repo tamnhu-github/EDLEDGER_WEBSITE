@@ -102,6 +102,7 @@ p{
 .text-center{
     text-align: center;
     padding-top: 1.5rem;
+    
 }
 .py-1 { padding: 1.5rem 0;}
 .py-2 { padding: 2rem 0;}
@@ -133,10 +134,12 @@ p{
 /* Section: Who We Are */
 #who{
     display: flex;
-
 } 
-#who div{
-    flex: 1;
+#who .who-text{
+    flex: 0.52;
+}
+#who .who-img{
+    flex: 0.48;
 }
 #who .who-img{
     background: url(/img/images/home/people.jpg) no-repeat center center/cover;
@@ -180,18 +183,28 @@ p{
 #contact{
     display: flex;
 }
-#contact .map, #contact .contact-form {
-    flex: 1;
-
+.contact-form .form-group label{
+    display: block;
+}
+#contact .map{
+    flex: 0.65;
+}
+#contact .contact-form{
+    flex: 0.35;
+}
+#contact .form-group input, #contact .form-group textarea, #contact .contact-form input{
+    width: 100%;
+    padding: 0.5rem;
 }
 #contact .contact-form .form-group{
     margin: 0.75rem;
 }
-#contact .contact-form label{
-    display:block;
+#contact .contact-form .btn{
+    border-radius: 0.3rem;
 }
-#contact .contact-form input, #contact .contact-form textarea{
-    width: 100%;
-    padding: 0.5rem;
+#what .container .items .item{
+    text-align: start;
+    justify-content: space-between;
 }
+
 
