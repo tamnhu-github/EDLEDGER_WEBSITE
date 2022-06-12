@@ -58,25 +58,15 @@ p{
 }
 /*Showcase*/
 #showcase{
-    background: #333 url(/img/images/home/showcase.jpg) no-repeat center center/cover;
+    background: linear-gradient(0,rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/img/images/home/showcase.jpg) no-repeat center center/cover;
     color: #fff;
     height: 100vh;
-}
-
-#showcase .showcase-content{
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 100%;
     padding: 0 2rem;
-    /*Overlay*/
-    position: absolute;
-    top: 60px; 
-    left: 0px;
-    background-color: rgba(0,0,0,0.4);
-    width: 100%;
 }
 #showcase .btn{
     background-color: #93cb52;
