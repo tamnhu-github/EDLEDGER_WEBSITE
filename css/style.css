@@ -13,28 +13,54 @@ a{
 }
 p{
     margin: 0.75rem 0;
-    
 }
 .text-primary{
     color:#93cb52;
+}
+.text-center{
+    text-align: center;
+    padding-top: 1.5rem; 
 }
 .l-heading{
     font-size: 4rem;
     margin-bottom: 0.75rem;
     line-height: 1.1;
-
+}
+.m-heading{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    padding: 1rem;
 }
 .lead{
-    font-size: 1.3;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
     
 }
+.bg-light{
+    background: #fff;
+    color: #333;
+}
+.bg-dark{
+    background: #333;
+    color: #fff;
+}
+.btn-dark{
+    background: #333;
+    color: #fff;
+}
+.py-1 { padding: 1.5rem 0;}
+.py-2 { padding: 2rem 0;}
+.py-3 { padding: 3rem 0;}
 
+.p-1 { padding: 1.5rem;}
+.p-2 { padding: 2rem;}
+.p-3 { padding: 3rem;}
 /*Navbar*/
 #navbar{
     display: flex;
     position: sticky;
-    top:0;
+    top: 0;
     background: #333;
     color: #fff;
     justify-content: space-between;
@@ -45,28 +71,39 @@ p{
     display: flex;
     align-items: center;
     list-style-type: none;
+   
 }
 #navbar ul li a{
     color: #fff;
     padding: 0.75rem;
     margin:  0 0.25rem;
-    
 }
 #navbar ul li a:hover{
     background-color: #93cb52;
     border-radius: 5px;
+    font-weight: 600;
 }
 /*Showcase*/
 #showcase{
-    background: linear-gradient(0,rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/img/images/home/showcase.jpg) no-repeat center center/cover;
+    background: #333 url(/img/images/home/showcase.jpg) no-repeat center center/cover;
     color: #fff;
     height: 100vh;
+    position: relative;
+}
+#showcase .showcase-content{
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
     padding: 0 2rem;
+    /* Overlay */
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+    bottom: 0;
 }
 #showcase .btn{
     background-color: #93cb52;
@@ -78,10 +115,6 @@ p{
 #showcase .btn:hover{
     background: #7ab436;
 }
-.btn-dark{
-    background: #333;
-    color: #fff;
-}
 /* Ultility Classes */
 .container{
     max-width: 1100px;
@@ -89,36 +122,21 @@ p{
     padding: 0 2rem;
     overflow: hidden;
 }
-.text-center{
-    text-align: center;
-    padding-top: 1.5rem;
-    
-}
-.py-1 { padding: 1.5rem 0;}
-.py-2 { padding: 2rem 0;}
-.py-3 { padding: 3rem 0;}
-
-.p-1 { padding: 1.5rem;}
-.p-2 { padding: 2rem;}
-.p-3 { padding: 3rem;}
 /* Section: What We Do */
 #what .items{
     display: flex;
-    padding: 1rem;
 }
 #what .items .item{
-    flex: 1; 
+    flex: 1;
     text-align: center;
     padding: 1rem;
-    /* display: flex; */
 }
-#what .items .item i{
-    background-color: #93cb52;
-    border-radius: 30px;
+#what .items .item>i{
+    background: #93cb52;
     padding: 1rem;
-    font-weight: 900;
+    border-radius: 50%;
 }
-#what .items .item div{
+#what .items .item>div{
     margin-top: 1rem;
 }
 /* Section: Who We Are */
@@ -137,14 +155,6 @@ p{
 #who .p-2 .list li{
     list-style-type: none;
 }
-.bg-light{
-    background: #fff;
-    color: #333;
-}
-.bg-dark{
-    background: #333;
-    color: #fff;
-}
 #who .p-2 .list{
     margin: 0.5rem 0;
     list-style-type: none;
@@ -162,7 +172,7 @@ p{
 }
 #clients .container .items img{
    display: block;
-   margin: auto;
+   margin-top: -1.5rem;
    width: 60%;
 }
 /*Section: Contact */
@@ -176,11 +186,8 @@ p{
 .contact-form .form-group label{
     display: block;
 }
-#contact .map{
-    flex: 0.65;
-}
-#contact .contact-form{
-    flex: 0.35;
+#contact .map, #contact .contact-form{
+    flex: 1;
 }
 #contact .form-group input, #contact .form-group textarea, #contact .contact-form input{
     width: 100%;
@@ -192,9 +199,6 @@ p{
 #contact .contact-form .btn{
     border-radius: 0.3rem;
 }
-#what .container .items .item{
-    text-align: start;
-    justify-content: space-between;
-}
+
 
 
